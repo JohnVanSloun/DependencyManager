@@ -1,0 +1,36 @@
+/*test machine: KH1250-16
+* date: 02/13/24
+* name: Sharmarke Ahmed, Bradley Johnson, John Van Sloun
+* x500: ahme0344, joh22202, vansl060
+*/
+
+Contributions:
+    Sharmarke Ahmed: createDepGraph() function, assisted with addEdge() function, helped add error checking to DFSVisit() and processGraph() functions, Makefile
+    Bradley Johnson: addEdge() function, README text, edits to main.c, DFSVisit() parallelism
+    John Van Sloun: Makefile, part of main.c, DFSVisit() sequential and output/execution code, freeGraph() function.
+
+How to compile:
+    In the terminal, navigate to the folder with the source files
+    and use "make" to create an executable. It can then be run with
+    "./depGraph [filename]" or "./depGraph -p [filename]".
+
+Purpose:
+    Runs commands from a given .txt file in a DFS order based on the node
+    info in the .txt file. Can also be run in parallel with "-p".
+
+What the program does:
+    Given an input file (with the proper formatting specified in Project1.pdf),
+    which lists the commands and arguments for each node and the directed edges
+    within the dependency graph for the nodes, the program will execute the
+    commands according to such dependency graph structure, where children of
+    a given node have their commands executed before the parent of such node.
+    Internally, the program will convert the supplied text file into a tree
+    representation based on the information given in the input file, with each
+    node having a command. in sequential mode, the tree is navigated and nodes
+    will be executed in DFS order. In parallel mode when the -p flag is specified,
+    all the children of a given parent node will have their commands executed
+    simultaneously. As commands from nodes are ran, the current process ID, its
+    parent process' ID, the executable, and the arguments are written to an output
+    file.
+
+Other assumptions: 
