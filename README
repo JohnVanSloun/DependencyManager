@@ -1,9 +1,3 @@
-/*test machine: KH1250-16
-* date: 02/13/24
-* name: Sharmarke Ahmed, Bradley Johnson, John Van Sloun
-* x500: ahme0344, joh22202, vansl060
-*/
-
 Contributions:
     Sharmarke Ahmed: createDepGraph() function, assisted with addEdge() function, helped add error checking to DFSVisit() and processGraph() functions, Makefile
     Bradley Johnson: addEdge() function, README text, edits to main.c, DFSVisit() parallelism
